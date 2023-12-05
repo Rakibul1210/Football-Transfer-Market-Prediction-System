@@ -2,7 +2,7 @@ import joblib
 import pandas as pd
 
 # Load the pre-trained model
-model = joblib.load('models/trained_rf_model.joblib')
+model = joblib.load('model/trained_rf_model.joblib')
 
 player_stats = {
     'Name': 'Erling Haaland',  # No need for a list since we're predicting one player
@@ -57,7 +57,7 @@ player_stats = {
 }
 
 # Create a DataFrame from the dictionary
-player_df = pd.DataFrame([player_stats])  
+player_df = pd.DataFrame([player_stats])
 player_df = player_df.drop([ 'Nation', 'Pos', 'Squad', 'Comp'], axis=1)   # For Now
 player_df = player_df.drop(['Market_value', 'Name','Transfer_fee','Rk'], axis=1) # Permanent
 print(player_df)
