@@ -52,7 +52,7 @@ mse = mean_squared_error(y_test, y_pred)
 rmse = mse**0.5
 
 print('Mean Absolute error: ', mae)
-print('Mean squared error: ', mse)
+# print('Mean squared error: ', mse)
 print('Root mean squared error: ', rmse)
 
 # Save the trained model to a file
